@@ -453,6 +453,7 @@ static ssize_t htc_battery_set_navigation(struct device *dev,
 
 	return count;
 }
+
 static ssize_t htc_battery_set_context_event(struct device *dev,
 				struct device_attribute *attr,
 				const char *buf, size_t count)
@@ -519,6 +520,7 @@ static struct device_attribute htc_battery_attrs[] = {
 	__ATTR(batt_attr_text, S_IRUGO, htc_battery_show_batt_attr, NULL),
 	__ATTR(batt_power_meter, S_IRUGO, htc_battery_show_cc_attr, NULL),
 	__ATTR(htc_extension, S_IRUGO, htc_battery_show_htc_extension_attr, NULL),
+
 };
 
 static struct device_attribute htc_set_delta_attrs[] = {
@@ -547,6 +549,7 @@ static struct device_attribute htc_battery_rt_attrs[] = {
 	__ATTR(batt_vol_now, S_IRUGO, htc_battery_rt_attr_show, NULL),
 	__ATTR(batt_current_now, S_IRUGO, htc_battery_rt_attr_show, NULL),
 	__ATTR(batt_temp_now, S_IRUGO, htc_battery_rt_attr_show, NULL),
+	 
 };
 
 
