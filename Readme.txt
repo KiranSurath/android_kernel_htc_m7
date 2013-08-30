@@ -1,19 +1,17 @@
-defconfig file: m7_defconfig  (arm-eabi-4.6)
+defconfig file: cyanogenmod_m7_defconfig  (arm-eabi-4.8)
 
 Download:
 =========
 If you are not already using an AOSP toolchain (included in an AOSP build tree), download the corresponding official android toolchain for the arm-eabi specified above for this device:
         
-git clone https://android.googlesource.com/platform/prebuilt  for 4.4.3
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6  for 4.6 
-(use darwin-x86 in place of linux-x86 for mac)
+git clone https://github.com/SaberMod/android_prebuilts_gcc_linux-x86_arm_sabermod-arm-eabi-4.8 for 4.8.2
 
 Build the kernel:
 =================
 set the following environment variables:
 
 export TOP= [where you installed the toolchain or top of android AOSP code base]
-export PATH=$TOP/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin:$PATH (use corresponding arm-eabi bin path)
+export PATH=$TOP/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin:$PATH (use corresponding arm-eabi bin path)
 export ARCH=arm
 export SUBARCH=arm
 export CROSS_COMPILE=arm-eabi-
